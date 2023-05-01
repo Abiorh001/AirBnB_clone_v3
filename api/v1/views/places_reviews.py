@@ -12,7 +12,7 @@ from models.review import Review
 @app_views.route('/places/<place_id>/reviews',
                  methods=['GET', 'POST'], strict_slashes=False)
 def reviews_by_place(place_id):
-    """retrieve reviews based on place_id"""
+    """This retrieve reviews based on place_id"""
     place = storage.get(Place, place_id)
 
     if place is None:
@@ -40,7 +40,7 @@ def reviews_by_place(place_id):
 @app_views.route('/reviews/<string:review_id>',
                  methods=['GET', 'PUT', 'DELETE'], strict_slashes=False)
 def review_by_review_id(review_id):
-    """retrieves review by review id"""
+    """This retrieves review by review id"""
     review = storage.get(Review, review_id)
     if review is None:
         abort(404)
