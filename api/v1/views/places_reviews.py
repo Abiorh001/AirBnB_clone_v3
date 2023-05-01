@@ -1,4 +1,6 @@
-ndles all restful actions for reviews"""
+#!/usr/bin/python3
+
+"""This handles all restful actions for reviews"""
 
 from api.v1.views import app_views
 from flask import request, jsonify, abort
